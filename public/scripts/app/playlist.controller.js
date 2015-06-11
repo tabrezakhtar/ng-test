@@ -1,4 +1,11 @@
-controllerModule.controller('PlaylistCtrl', ['$scope', function ($scope) {
+controllerModule.controller('PlaylistCtrl', ['$scope', 'playlistService', function ($scope, playlistService) {
 	'use strict';
-	$scope.message = 'Playlist Controller';	
+	
+	$scope.model = {
+		playlist: null
+	};
+
+	playlistService.getPlaylist().then(function(playlist){
+		$scope.model.playlist = playlist;
+	});
 }]);

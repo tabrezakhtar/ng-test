@@ -1,1 +1,24 @@
-{{message}}
+<h2 id="playlistTitle">Playlist</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Genre</th>
+      <th>Duration</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="song in model.songs">
+      <td>{{song.id}}</td>
+      <td>{{song.title}}</td>
+      <td>{{song.artist}}</td>
+      <td>{{song.genre}}</td>
+      <td>{{song.duration}}</td>
+      <td>{{song.rating}}</td>
+    </tr>
+  </tbody>
+</table>

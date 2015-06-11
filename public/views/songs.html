@@ -1,9 +1,9 @@
-<span id="songs">Songs</span>
+<h2 id="songsTitle">Songs</h2>
 
 <form>
 <div class="form-group">
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="Search" ng-model="model.search">
+    <input type="text" class="form-control" placeholder="Filter songs" ng-model="model.search">
   </div>      
 </div>
 </form>
@@ -11,6 +11,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>#</th>
       <th>Title</th>
       <th>Artist</th>
       <th>Genre</th>
@@ -20,6 +21,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="song in model.songs | filter:model.search">
+      <td>{{song.id}}</td>
       <td>{{song.title}}</td>
       <td>{{song.artist}}</td>
       <td>{{song.genre}}</td>

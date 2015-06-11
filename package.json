@@ -1,0 +1,33 @@
+{
+  "name": "music-player",
+  "version": "0.0.1",
+  "description": "music player spa",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tabrezakhtar/ng-test.git"
+  },
+  "author": "Tabrez Akhtar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tabrezakhtar/ng-test/issues"
+  },
+  "homepage": "https://github.com/tabrezakhtar/ng-test",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-html-replace": "^1.4.5",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "node-dir": "^0.1.8",
+    "run-sequence": "^1.1.0"
+  }
+}

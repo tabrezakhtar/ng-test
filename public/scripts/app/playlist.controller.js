@@ -8,4 +8,5 @@ controllerModule.controller('PlaylistCtrl', ['$scope', 'playlistService', functi
 	playlistService.getPlaylist().then(function(playlist){
 		$scope.model.playlist = playlist;
 	});
+
 }]);

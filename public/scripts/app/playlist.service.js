@@ -12,6 +12,14 @@ serviceModule.service('playlistService', ['$q', 'httpService', function ($q, htt
             });
 
             return deferred.promise;
+        },
+
+        addSongToPlaylist: function (song) {
+            this.playlist[song.id] = song;
+        },
+        
+        removeSongFromPlaylist: function (id) {
+            this.playlist.splice(id, 1);
         }
     };
 }]);

@@ -17,6 +17,7 @@
       <th>Genre</th>
       <th>Duration</th>
       <th>Rating</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -27,6 +28,9 @@
       <td>{{song.genre}}</td>
       <td>{{song.duration}}</td>
       <td>{{song.rating}}</td>
+      <td>
+      	<button ng-click="addToPlaylist(song.id)">Add</button>
+      </td>
     </tr>
   </tbody>
 </table>

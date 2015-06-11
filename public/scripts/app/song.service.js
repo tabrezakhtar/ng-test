@@ -12,6 +12,11 @@ serviceModule.service('songService', ['$q', 'httpService', function ($q, httpSer
             });
 
             return deferred.promise;
+        },
+        
+        getSong: function (id) {
+           return _.find(this.songs, function(song){ return song.id === id; });            
         }
+
     };
 }]);

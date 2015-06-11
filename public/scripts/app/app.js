@@ -3,7 +3,8 @@ var musicApp = angular
     'ngRoute', 
     'musicApp.controllers', 
     'musicApp.services', 
-    'musicApp.directives'
+    'musicApp.directives',
+    'musicApp.mediators'
   ])
   .config(['$routeProvider', function ($routeProvider) {
     'use strict';
@@ -26,3 +27,4 @@ var musicApp = angular
 var controllerModule = angular.module('musicApp.controllers', []);
 var serviceModule = angular.module('musicApp.services', []);
 var directiveModule = angular.module('musicApp.directives', []);
+var mediatorModule = angular.module('musicApp.mediators', []);

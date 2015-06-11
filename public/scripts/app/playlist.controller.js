@@ -5,8 +5,16 @@ controllerModule.controller('PlaylistCtrl', ['$scope', 'playlistService', functi
 		playlist: null
 	};
 
-	playlistService.getPlaylist().then(function(playlist){
-		$scope.model.playlist = playlist;
+	loadPlaylist();
+
+	$scope.$on('song-added-to-playlist', function(event, args) {
+	    loadPlaylist();
 	});
+
+	function loadPlaylist() {
+		playlistService.getPlaylist().then(function(playlist) {
+        	$scope.model.playlist = playlist;
+		});
+	}
 
 }]);

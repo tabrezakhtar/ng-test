@@ -1,13 +1,15 @@
 serviceModule.service('songService', ['$q', 'httpService', function ($q, httpService) {
+    'use strict';
 
     var songs = [];
 
     return {
         getSongList: function () {
-            var deferred = $q.defer();
+            var deferred = $q.defer(),
+                self = this;
 
             httpService.get('/api/songs').then(function(songs) {
-                this.songs = songs;
+                self.songs = songs;
                 deferred.resolve(songs);
             });
 

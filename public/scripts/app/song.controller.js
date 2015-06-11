@@ -9,7 +9,7 @@ controllerModule.controller('SongCtrl', ['$scope', 'playlistMediator', 'songServ
 		$scope.model.songs = songs;
 	});
 
-	$scope.addToPlaylist = function(songId) {
-		playlistMediator.addSongToPlaylist(songId);
+	$scope.addToPlaylist = function(songId) {		
+    	playlistMediator.addSongToPlaylist(songId);   
 	};
 }]);

@@ -10,7 +10,8 @@ app.get('/api/songs', function (req, res) {
 	      "artist": "Nirvana",
 	      "genre": "Grunge",
 	      "duration": 5.01,
-	      "rating": 3
+	      "rating": 3,
+	      "isVisible": true
 	    },
 	    {
 	      "id": 2,
@@ -18,7 +19,8 @@ app.get('/api/songs', function (req, res) {
 	      "artist": "AC/DC",
 	      "genre": "Rock",
 	      "duration": 4.52,
-	      "rating": 4
+	      "rating": 4,
+	      "isVisible": true
 	    },
 	    {
 	      "id": 3,
@@ -26,7 +28,8 @@ app.get('/api/songs', function (req, res) {
 	      "artist": "Guns N' Roses",
 	      "genre": "Hard Rock",
 	      "duration": 5.56,
-	      "rating": 4
+	      "rating": 4,
+	      "isVisible": true
 	    },
 	    {
 	      "id": 4,
@@ -34,7 +37,8 @@ app.get('/api/songs', function (req, res) {
 	      "artist": "Bon Jovi",
 	      "genre": "Rock",
 	      "duration": 4.09,
-	      "rating": 3.5
+	      "rating": 3.5,
+	      "isVisible": true
 	    },
 	    {
 	      "id": 5,
@@ -42,7 +46,8 @@ app.get('/api/songs', function (req, res) {
 	      "artist": "The Darkness",
 	      "genre": "Pop",
 	      "duration": 4.01,
-	      "rating": 2
+	      "rating": 2,
+	      "isVisible": true
 	    },
 	    {
 	      "id": 6,
@@ -50,7 +55,8 @@ app.get('/api/songs', function (req, res) {
 	      "artist": "The Vaccines",
 	      "genre": "Indie",
 	      "duration": 2.20,
-	      "rating": 2
+	      "rating": 2,
+	      "isVisible": true
 	    },
 	    {
 	      "id": 7,
@@ -58,7 +64,8 @@ app.get('/api/songs', function (req, res) {
 	      "artist": "Led Zeppelin",
 	      "genre": "Classic Rock",
 	      "duration": 7.58,
-	      "rating": 4.5
+	      "rating": 4.5,
+	      "isVisible": true
 	    },
 	    {
 	      "id": 8,
@@ -66,7 +73,8 @@ app.get('/api/songs', function (req, res) {
 	      "artist": "The Chemical Brothers",
 	      "genre": "Electronic",
 	      "duration": 3.20,
-	      "rating": 1
+	      "rating": 1,
+	      "isVisible": true
 	    },
 	    {
 	      "id": 9,
@@ -74,7 +82,8 @@ app.get('/api/songs', function (req, res) {
 	      "artist": "David Guetta",
 	      "genre": "Dance",
 	      "duration": 2.50,
-	      "rating": 1
+	      "rating": 1,
+	      "isVisible": true
 	    },
 	    {
 	      "id": 10,
@@ -82,7 +91,8 @@ app.get('/api/songs', function (req, res) {
 	      "artist": "Zombie Nation",
 	      "genre": "Techno",
 	      "duration": 3.33,
-	      "rating": 2.5
+	      "rating": 2.5,
+	      "isVisible": true
 	    }];
 
     res.json(songsList);

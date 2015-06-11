@@ -29,8 +29,8 @@ serviceModule.service('playlistService', ['$q', 'httpService', function ($q, htt
             // });
         },
         
-        removeSongFromPlaylist: function (id) {
-            this.playlist.splice(id, 1);
+        removeSongFromPlaylist: function (songId) {
+            this.playlist = _.filter(this.playlist, function (song) { return song.id !== songId; });
         }
     };
 }]);

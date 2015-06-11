@@ -5,7 +5,13 @@ mediatorModule.service('playlistMediator', ['$rootScope', 'playlistService', 'so
         addSongToPlaylist: function (songId) {
             var song = songService.getSong(songId);
             playlistService.addSongToPlaylist(song);
-            $rootScope.$broadcast('song-added-to-playlist');
+            $rootScope.$broadcast('playlist-changed');
+        },
+
+        removeSongFromPlaylist: function (songId) {
+            playlistService.removeSongFromPlaylist(songId);
+            songService.addToSongList(songId);
+            $rootScope.$broadcast('playlist-changed');
         }
     };
 }]);

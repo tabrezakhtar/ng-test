@@ -11,7 +11,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>#</th>
       <th>Title</th>
       <th>Artist</th>
       <th>Genre</th>
@@ -21,8 +20,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="song in model.songs | filter:model.search">
-      <td>{{song.id}}</td>
+    <tr ng-repeat="song in model.songs | filter:model.search | filter: {isVisible:true}">
       <td>{{song.title}}</td>
       <td>{{song.artist}}</td>
       <td>{{song.genre}}</td>

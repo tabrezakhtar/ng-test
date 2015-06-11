@@ -16,8 +16,15 @@ serviceModule.service('songService', ['$q', 'httpService', function ($q, httpSer
             return deferred.promise;
         },
         
-        getSong: function (id) {
-           return _.find(this.songs, function(song){ return song.id === id; });            
+        getSong: function (songId) {
+           var song = _.find(this.songs, function(song){ return song.id === songId; });
+           song.isVisible = false;
+           return song;
+        },
+
+        addToSongList: function (songId) {
+           var song = _.find(this.songs, function(song){ return song.id === songId; });
+           song.isVisible = true;
         }
 
     };

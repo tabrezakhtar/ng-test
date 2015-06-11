@@ -3,22 +3,25 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>#</th>
+
       <th>Title</th>
       <th>Artist</th>
       <th>Genre</th>
       <th>Duration</th>
       <th>Rating</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="song in model.playlist">
-      <td>{{song.id}}</td>
       <td>{{song.title}}</td>
       <td>{{song.artist}}</td>
       <td>{{song.genre}}</td>
       <td>{{song.duration}}</td>
       <td>{{song.rating}}</td>
+      <td>
+        <button ng-click="removeFromPlaylist(song.id)">X</button>
+      </td>
     </tr>
   </tbody>
 </table>

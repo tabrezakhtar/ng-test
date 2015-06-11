@@ -1,13 +1,18 @@
-controllerModule.controller('PlaylistCtrl', ['$scope', 'playlistService', function ($scope, playlistService) {
+controllerModule.controller('PlaylistCtrl', ['$scope', 'playlistMediator', 'playlistService', function ($scope, playlistMediator, playlistService) {
 	'use strict';
 	
 	$scope.model = {
 		playlist: null
 	};
 
+	$scope.removeFromPlaylist = function(songId) {
+		//$scope.model.playlist = _.filter($scope.model.playlist, function (song) { return song.id !== songId; });
+		playlistMediator.removeSongFromPlaylist(songId);
+	};
+
 	loadPlaylist();
 
-	$scope.$on('song-added-to-playlist', function(event, args) {
+	$scope.$on('playlist-changed', function(event, args) {
 	    loadPlaylist();
 	});
 

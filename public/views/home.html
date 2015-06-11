@@ -1,11 +1,39 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span class="navbar-brand">SPA Music Player</span>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="row">
+  <div class="col-md-6">
+  	<div class="jumbotron">
+	  <h1>Songs</h1>
+	</div>
+  </div>
+  <div class="col-md-6">
+	<div class="jumbotron">
+  		<h1>Playlist</h1>
+	</div>
+  </div>
+</div>
+
 {{message}}
 
 <a href="/#/songs" class="pure-button pure-button-primary">songs</a>
 <a href="/#/playlist" class="pure-button pure-button-secondary">playlist</a>
 
 
-<br />
-<button class="button-success pure-button">Success Button</button>
-<button class="button-error pure-button">Error Button</button>
-<button class="button-warning pure-button">Warning Button</button>
-<button class="button-secondary pure-button">Secondary Button</button>
+<div class="btn-group">
+    <label class="btn btn-primary" ng-model="checkModel.left" btn-checkbox>Left</label>
+    <label class="btn btn-primary" ng-model="checkModel.middle" btn-checkbox>Middle</label>
+    <label class="btn btn-primary" ng-model="checkModel.right" btn-checkbox>Right</label>
+</div>

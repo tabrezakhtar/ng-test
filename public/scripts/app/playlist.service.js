@@ -31,6 +31,11 @@ serviceModule.service('playlistService', ['$q', 'httpService', function ($q, htt
         
         removeSongFromPlaylist: function (songId) {
             this.playlist = _.filter(this.playlist, function (song) { return song.id !== songId; });
+
+            // httpService.delete('/api/playlist?id=songId').then(function(playlist) {
+            //     this.playlist = playlist;
+            //     deferred.resolve(playlist);
+            // });
         }
     };
 }]);

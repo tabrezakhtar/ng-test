@@ -6,7 +6,6 @@ controllerModule.controller('PlaylistCtrl', ['$scope', 'playlistMediator', 'play
 	};
 
 	$scope.removeFromPlaylist = function(songId) {
-		//$scope.model.playlist = _.filter($scope.model.playlist, function (song) { return song.id !== songId; });
 		playlistMediator.removeSongFromPlaylist(songId);
 	};
 

@@ -1,6 +1,7 @@
 var musicApp = angular
   .module('musicApp', [
     'ngRoute', 
+    'ui.bootstrap',
     'musicApp.controllers', 
     'musicApp.services', 
     'musicApp.directives',

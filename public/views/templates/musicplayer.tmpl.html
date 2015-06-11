@@ -1,0 +1,23 @@
+<div class="well">
+	<p>
+		Title: {{title}}
+	</p>
+
+	<p>
+		Artist: {{artist}}
+	</p>
+
+	<p>
+		Duration: {{duration}}
+	</p>
+
+	<progressbar value="55"></progressbar>
+
+	<div class="btn-group">
+	    <label class="btn btn-primary" ng-model="checkModel.left" btn-checkbox>Previous</label>
+	    <label class="btn btn-primary" ng-model="checkModel.middle" btn-checkbox>{{playerState}}</label>
+	    <label class="btn btn-primary" ng-model="checkModel.right" btn-checkbox>Next</label>
+	</div>
+
+
+</div>

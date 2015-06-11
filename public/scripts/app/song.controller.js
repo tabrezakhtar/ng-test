@@ -1,11 +1,11 @@
 controllerModule.controller('SongCtrl', ['$scope', 'httpService', function ($scope, httpService) {
 	'use strict';
-	$scope.message = 'Song Controller';	
-
-
-	$scope.message = 'Home Controller';	
+	$scope.model = {
+		songs: null,
+		searchText: ''
+	};
 
 	httpService.get('/api/songs').then(function(songs){
-		$scope.songs = songs;
+		$scope.model.songs = songs;
 	});
 }]);

@@ -1,6 +1,12 @@
-{{message}}
-
 <span id="songs">Songs</span>
+
+<form>
+<div class="form-group">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search" ng-model="model.search">
+  </div>      
+</div>
+</form>
 
 <table class="table table-striped">
   <thead>
@@ -13,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="song in songs">
+    <tr ng-repeat="song in model.songs | filter:model.search">
       <td>{{song.title}}</td>
       <td>{{song.artist}}</td>
       <td>{{song.genre}}</td>

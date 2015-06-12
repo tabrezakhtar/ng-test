@@ -1,22 +1,22 @@
 <div class="well">
 	<p>
-		Title: {{title}}
+		Title: {{model.currentSong.title}}
 	</p>
 
 	<p>
-		Artist: {{artist}}
+		Artist: {{model.currentSong.artist}}
 	</p>
 
 	<p>
-		Duration: {{duration}}
+		Duration: {{model.currentSong.duration}}
 	</p>
 
-	<progressbar value="songTime"></progressbar></div>
+	<progressbar value="model.songTime"></progressbar></div>
 
 	<div class="btn-group">
-	    <label class="btn btn-primary">Previous</label>
-	    <label class="btn btn-primary">{{playerState}}</label>
-	    <label class="btn btn-primary">Next</label>
+	    <label class="btn btn-primary" ng-click="prev()">Previous</label>
+	    <label class="btn btn-primary" ng-click="loadPlaylist()">{{model.playerState}}</label>
+	    <label class="btn btn-primary" ng-click="next()">Next</label>
 	</div>
 
 

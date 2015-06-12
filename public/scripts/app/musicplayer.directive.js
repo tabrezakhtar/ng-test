@@ -11,6 +11,12 @@ directiveModule.directive('musicPlayer', ['playlistService', function (playlistS
         // },
         link: function (scope, iElement, attr) {
             scope.playerState = 'Play';
+            scope.songTime = 5;
+                
+            playlistService.getPlaylist().then(function(playlist) {
+                
+            });
+            
         }
     };
 }]);

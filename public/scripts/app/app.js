@@ -12,11 +12,11 @@ var musicApp = angular
 
     $routeProvider
       .when('/playlist', {
-        templateUrl: '/views/playlist.html',
+        templateUrl: '/views/musicplayer/playlist.html',
         controller: 'PlaylistCtrl'
       })
       .when('/songs', {
-        templateUrl: '/views/songs.html',
+        templateUrl: '/views/musicplayer/songs.html',
         controller: 'SongCtrl'
       })
       .otherwise({

@@ -1,4 +1,4 @@
-controllerModule.controller('HomeCtrl', ['$scope', 'httpService', function ($scope, httpService) {
+controllerModule.controller('HomeCtrl', ['$scope', function ($scope) {
 	'use strict';
 
 	$scope.message = 'Home Controller';	

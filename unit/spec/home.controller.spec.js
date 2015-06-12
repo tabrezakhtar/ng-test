@@ -5,13 +5,13 @@ describe('Controller: HomeCtrl', function () {
   // load the controller's module
   beforeEach(module('musicApp.controllers'));
 
-  var weatherController, scope;
+  var _homeController, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
           
-    weatherController = $controller('HomeCtrl', {
+    _homeController = $controller('HomeCtrl', {
       $scope: scope
     });
   }));

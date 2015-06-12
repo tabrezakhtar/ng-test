@@ -1,7 +1,7 @@
 directiveModule.directive('musicPlayer', ['$interval', 'playlistService', function ($interval, playlistService) {
 
     return {
-        templateUrl: '/views/templates/musicplayer.tmpl.html',
+        templateUrl: '/views/musicplayer/templates/musicplayer.tmpl.html',
         restrict: 'A',
         link: function (scope, iElement, attr) {
             var songInterval, 

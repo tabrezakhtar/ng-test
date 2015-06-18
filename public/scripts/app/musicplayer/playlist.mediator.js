@@ -9,7 +9,7 @@ mediatorModule.service('playlistMediator', ['$rootScope', 'playlistService', 'so
         },
 
         removeSongFromPlaylist: function (songId) {
-            playlistService.removeSongFromPlaylist(songId);
+            playlistService.removeSongFromPlaylist(songId)
             songService.addToSongList(songId);
             $rootScope.$broadcast('playlist-changed');
         }

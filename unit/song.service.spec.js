@@ -18,7 +18,7 @@ describe('Song Service', function() {
           "genre": "Rock",
           "duration": 4.52,
           "rating": 4,
-          "isVisible": true
+          "isVisible": false
         }
       ];
 
@@ -33,18 +33,54 @@ describe('Song Service', function() {
       def = $q.defer();
       def.resolve(mockSongsList);
       spyOn(httpService, 'get').and.returnValue(def.promise);
-   }));
+    }));
 
     describe('when getting a list of songs', function() {
 
-      it("should have a songslist method defined", function () {
+      it("should have a songsList method defined", function () {
         expect(songService.getSongList).toBeDefined();  
       });
 
       it("should return a list of songs", function () {
         songService.getSongList().then(function(response) {
           expect(response).not.toBe(null);
-          expect(response.mockResponse).length.toEqual(2);
+          expect(response.length).toEqual(2);
+        });    
+
+        $rootScope.$digest();
+      });
+
+    });
+
+    describe('when getting an individual song', function() {
+
+      it("should have a getSong method defined", function () {
+        expect(songService.getSong).toBeDefined();  
+      });
+
+      it("should return a song", function () {
+
+        songService.getSongList().then(function(songList) {
+          var song = songService.getSong(2);
+          expect(song.id).toBe(2);          
+        });    
+
+        $rootScope.$digest();
+      });
+
+    });
+
+    describe('when adding a song back to the playlist', function() {
+
+      it("should have a addToSongList method defined", function () {
+        expect(songService.addToSongList).toBeDefined();  
+      });
+
+      it("should make the song visible in the playlist", function () {
+
+        songService.getSongList().then(function(songList) {
+          var addSong = songService.addToSongList(2);
+          expect(songService.songs[1].isVisible).toBe(true);
         });    
 
         $rootScope.$digest();

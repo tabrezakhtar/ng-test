@@ -33,7 +33,6 @@ describe('Playlist Service', function() {
       });
 
       it("should add a song to the playlist", function () {
-        debugger;
         playlistService.getPlaylist().then(function(response) {
           var originalPlaylistLength = response.length;
           playlistService.addSongToPlaylist(mockSong);
@@ -53,7 +52,6 @@ describe('Playlist Service', function() {
       });
 
       it("should remove a song from the playlist", function () {
-        debugger;
         playlistService.getPlaylist().then(function(response) {
           var songFromPlaylist = _.find(playlistService.playlist, function (song) { return song.id === 6; });
           expect(songFromPlaylist).not.toBe(null);

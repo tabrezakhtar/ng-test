@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: HomeCtrl', function () {
+describe('Home Controller', function () {
 	var $controller, $scope;
 
   	// load the controller's module

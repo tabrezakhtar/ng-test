@@ -1,23 +1,20 @@
 'use strict';
 
 describe('Controller: HomeCtrl', function () {
+	var $controller, $scope;
 
-  // load the controller's module
-  beforeEach(module('musicApp.controllers'));
+  	// load the controller's module
+  	beforeEach(module('musicApp.controllers'));
 
-  var _homeController, scope;
+  	// Initialize the controller and a mock scope
+  	beforeEach(inject(function(_$rootScope_, _$controller_, $injector){
+        $scope = _$rootScope_.$new();
+        $controller = _$controller_;
 
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-          
-    _homeController = $controller('HomeCtrl', {
-      $scope: scope
+        $controller('HomeCtrl', {'$scope': $scope});
+    }));
+
+    it('should have a message defined', function() {
+        expect($scope.message).toEqual('Home Controller');
     });
-  }));
-
-  it('should have a message defined', function () {
-    scope.$apply();
-    expect(scope.message).toBe('Home Controller');
-  });
 });
